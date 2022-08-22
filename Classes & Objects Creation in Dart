@@ -1,0 +1,74 @@
+//classes and Objects
+/* void main(){
+    // Object Creation / Object Instanciation
+    // ClassName objectname = ClassName(); 
+
+     // Method-1
+        Student   student1  =  Student();
+
+     // Method-2
+     Student student2 = new Student();
+
+    // Method-3
+      var student3 = Student();
+   
+  // Method-4
+    var student4 = new Student();
+
+}  */
+
+
+//  Example: 1
+
+void main() {
+  Student student1 = Student();
+
+  // how to call function in class or how to call class function
+  // how to call function through object
+  // Object-name.function-name();
+        student1.helloWorld();
+}
+
+class Student {
+  // Class Properties/Fields / Attributes / Instance Variables
+  // late ,variable mai if initializtion baad mai kro tu  then late use
+
+  /* late String  studentName;
+   late int   studentRollNo;
+   late double studentGPA;
+   var emailAddress;
+   var phoneNumber; */
+
+  void helloWorld() {
+    print(" Hello Wold");
+  }
+}
+
+
+// Example: 2
+
+void main() {
+  // how to call function in class or how to call class function
+  // Object-name.function-name();
+
+  // How to pass params to class's function
+
+  Student stu1 = Student();
+  stu1.studentDetail("Muhammad Adil Naeem", 42, 3.52,
+      phoneNumber: 92123456, emailAddress: "adil@gmail.com");
+}
+
+class Student {
+  // Class Properties/Fields / Attributes / Instance Variables
+  // late ,if initializtion baad mai kro tu  then late use
+
+  void studentDetail(String name, int rollNo, double gpa,
+      {String? emailAddress, int? phoneNumber}) {
+    print(name);
+    print(rollNo);
+    print(gpa);
+    print(emailAddress);
+    print(phoneNumber);
+  }
+}
+
